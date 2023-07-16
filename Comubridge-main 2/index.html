@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Search Engine use --->
+    <meta name="Comubridge" content="Team Comubridge"/>
+    <meta name="description" content="An easy to use and handy communication application for mute,deaf and blind people around world"/>
+    <meta name="key words" content="communication,deaf,blind,mute,people,easy,handle,flexible,application,software"/>
+
+    <meta name="google-site-verification" content="YKLJXdgbsyIvqhRuoHDyFMLeN-tjRe3W1rL5w13AULg" />
+
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- local resource -->
+
+    <!-- js -->
+    <script src="assets/icons/font_awsome.js"></script>
+    <script src="js/index.js"></script>
+    <script src="/js/navbar.js"></script>
+
+    <!-- css -->
+    <link href="/css/style.css" rel="stylesheet">
+    
+    <!-- Fav Icon-->
+    <link rel="icon" type="image/x-icon" href="/assets/images/temp_logo.png">
+    <title>Home | Comubridge</title>
+
+   
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo"><img src="./assets/images/temp_logo.png" alt="Comubridge" class="logo"></div>
+      <div class="push-left">
+        <button id="menu-toggler" data-class="menu-active" class="hamburger">
+          <span class="hamburger-line hamburger-line-top"></span>
+          <span class="hamburger-line hamburger-line-middle"></span>
+          <span class="hamburger-line hamburger-line-bottom"></span>
+        </button>
+
+        <!--  Menu compatible with wp_nav_menu  -->
+        <ul id="primary-menu" class="menu nav-menu">
+          <li class="menu-item current-menu-item"><a class="nav__link" href="/index.html">Home</a></li>
+          <li class="menu-item"><a class="nav__link" href="/profile.html">Profile</a></li>
+          <li class="menu-item"><a class="nav__link" href="/about.html">About</a></li>
+          <li class="menu-item"><a id="nameid" class="name"></a></li>
+          <li class="menu-item logoutfloatright"><a id="logoutnavbutton">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container home_container mt-5">
+        <p class="home_title">Make a selection from the choices below</p>
+        <div class="container p-4 ">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 col-sm-12 mt-2">
+              <button type="button"  class="home_options active_btn">
+                <i class="fa-duotone fa-typewriter"></i>
+                Text
+              </button>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-12 mt-2">
+              <button type="button"  class="home_options">
+                <i class="fa-duotone fa-microphone"></i>
+                Audio
+              </button>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-12 mt-2">
+              <button type="button"  class="home_options">
+                <i class="fa-duotone fa-video"></i>
+                Video
+              </button>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-12 mt-2">
+              <button type="button"  class="home_options">
+                <i class="fa-duotone fa-braille"></i>
+                Brail
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="content_sec container my-5">
+      <!-- TEXT -->
+      <section class="input_sec " id="Text_output">
+        <p class="home_title">Type your text input here</p>
+        <textarea placeholder="e.g. Hey! This is Comubridge...." name="text_input" class="text_input" id="text_input" cols="30" rows="10"></textarea>
+        <!-- OUTPUT CHOICES SELECTION AREA -->
+        <p class="home_title">Pick from output options lsited below...</p>
+        <div class="row">
+          <div class="col-lg-4"><button type="button" onclick="showHideOutput('text')" class="text_output">Translated text</button></div>
+          <div class="col-lg-3"><button type="button" onclick="showHideOutput('audio')"  class="audio_output">Audio</button></div>
+          <div class="col-lg-3"><button type="button" onclick="showHideOutput('brail')"  class="brail_output">Brail</button></div>
+        </div>
+      </section>
+      
+      <!-- AUDIO -->
+      <section class="input_sec hide" id="Audio_output">
+        <p class="home_title">Record your audio input here</p>
+        <textarea name="audio_input" placeholder="As you speak text will be automatically get typed here..." id="speech" cols="30" rows="10"></textarea>
+        <div class="row mt-2 mb-5 d-flex justify-content-center">
+          <div class="col-6 text-center">
+            <i class="fa-solid fa-microphone-stand" onclick="voice()"></i>
+            <i class="fa-solid fa-volume" id="speak-button"></i>
+          </div>
+        </div>
+        <p class="home_title">Pick from output options lsited below...</p>
+        <div class="row">
+          <div class="col-lg-3"><button type="button" onclick="showHideOutput('text')" class="text_output">Translated text</button></div>
+          <div class="col-lg-3"><button type="button" onclick="showHideOutput('brail')"  class="brail_output">Brail</button></div>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="input_sec hide" id="Video_output">
+        <p class="home_title">Capture your video input here</p>
+        <div id="previewing">
+        <video id="cameraPreview" width="240" height="180" autoplay></video>
+        <div class="row">
+          <div class="col-lg-4">
+            <button type="button" id="startButton" onclick="startCapture();">Start Capture</button>
+          </div>
+          <div class="col-lg-4">
+            <button type="button" id="stopButton" onclick="stopCapture();">Stop Capture</button>
+          </div>
+        </div>
+          </p>
+      </div>
+  
+      <div id="processing">
+          <h2>Processing Preview</h2>
+          <canvas id="processingPreview" width="240" height="180"></canvas>
+      </div>
+  
+      <div id="recording">
+          <br>
+          <video id="recordingPreview" width="240" height="180" autoplay controls></video>
+      </div>
+        
+        <p class="home_title">Pick from output options lsited below...</p>
+        <div class="row">
+          <div class="col-lg-4"><button type="button" onclick="showHideOutput('text')" class="text_output">Translated text</button></div>
+          <div class="col-lg-3"><button type="button" onclick="showHideOutput('audio')" class="audio_output">Audio</button></div>
+          <div class="col-lg-3"><button type="button" onclick="showHideOutput('brail')" class="brail_output">Brail</button></div>
+        </div>
+      </section>
+
+      <!-- BRAIL -->
+      <section class="input_sec hide" id="Brail_output">
+        <p class="home_title">Enter your brail input here</p>
+        <textarea name="brail_input" class="text_input" id="brail_input" placeholder="Enter Brail text here..." cols="30" rows="10"></textarea>
+        <p class="home_title">Pick from output options lsited below...</p>
+        <div class="row">
+          <div class="col-lg-4"><button type="button" onclick="showHideOutput('text')" class="text_output">Translated text</button></div>
+          <div class="col-lg-3"><button type="button"  onclick="showHideOutput('audio')" class="audio_output">Audio</button></div>
+        </div>
+      </section>
+
+      <!-- OUTPUT SECTION  -->
+      <section class="output_sec mt-5" id="output_component">
+        <div class="output_subsec text_output hide">
+          <p class="home_title">Text Output as follows </p>
+          <textarea placeholder="e.g. This is translated text of given input." name="text_output" id="text_input" class="text_input" cols="30" rows="10"></textarea>
+        </div>
+        <div class="output_subsec brail_output hide">
+          <p class="home_title">Brail Output as follows </p>
+          <textarea name="text_input" placeholder="e.g. This is Brail equivalent of given input." name="brail_output" id="brail_output" class="text_input" cols="30" rows="10"></textarea>
+        </div>
+        <div class="output_subsec audio_output hide">
+          <p class="home_title">Audio Output as follows </p>
+          <audio id="audio" name="audio_output" id="audio_ouptut" controls></audio>   
+        </div>
+      </section>
+
+    </div>
+    <footer>
+      <p class="footertext">&copy; 2023 All Rights Reserved Comubridge.</p>
+  </footer>
+  
+ 
+  <script src="/js/video.js"></script>
+  <script src="/js/audio.js"></script>
+</body>
+
+</html>

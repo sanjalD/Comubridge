@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Search Engine use --->
+  <meta name="Comubridge" content="Team Comubridge" />
+  <meta name="description"
+    content="An easy to use and handy communication application for mute,deaf and blind people around world" />
+  <meta name="key words" content="communication,deaf,blind,mute,people,easy,handle,flexible,application,software" />
+
+  <meta name="google-site-verification" content="YKLJXdgbsyIvqhRuoHDyFMLeN-tjRe3W1rL5w13AULg" />
+
+
+  <!-- css -->
+  <link href="/css/style.css" rel="stylesheet">
+
+  <!-- Fav Icon-->
+  <link rel="icon" type="image/x-icon" href="/assets/images/temp_logo.png">
+  <title>Profile | Comubridge</title>
+
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><img src="./assets/images/temp_logo.png" alt="Comubridge" class="logo"></div>
+    <div class="push-left">
+      <button id="menu-toggler" data-class="menu-active" class="hamburger">
+        <span class="hamburger-line hamburger-line-top"></span>
+        <span class="hamburger-line hamburger-line-middle"></span>
+        <span class="hamburger-line hamburger-line-bottom"></span>
+      </button>
+
+      <!--  Menu compatible with wp_nav_menu  -->
+      <ul id="primary-menu" class="menu nav-menu">
+        <li class="menu-item current-menu-item"><a class="nav__link" href="/index.html">Home</a></li>
+        <li class="menu-item"><a class="nav__link" href="/profile.html">Profile</a></li>
+        <li class="menu-item"><a class="nav__link" href="/about.html">About</a></li>
+        <li class="menu-item"><a id="nameid" class="name"></a></li>
+        <li class="menu-item logoutfloatright"><a id="logoutnavbutton">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-2 profile_section">
+        <div class="col-md-2 mt-5">
+          <img src="./assets/images/profile.png" class="profile_pic">
+        </div>
+      </div>
+
+      <div class="col-md-7 details_section">
+        <form>
+          <p class="heading">Profile details</p>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label class="profile_title">Name</label>
+              <input type="text" id="fullname" placeholder="Enter your name" class="box_field"
+                value="e.g Harshil Ramani" readonly>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label class="profile_title">Phone no</label>
+              <input type="text" id="contact" placeholder="+91 XXXXXXXXXX" value="+91 XXXXXXXXXX" readonly>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label class="profile_title">Email</label>
+              <input type="text" id="email" placeholder="example@gmail.com" value="example@gmail.com" readonly>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <button type="button" id="updatebtn" class="update_btn">Update</button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" id="logoutbtn" class="logout_btn">Log out</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-3 info_section">
+        <img src="/assets/images/profile_illu.jpg" class="profile_illustrator">
+        <p class="profile_illustrator_text">One step Communication</p>
+        <p class="subtitle">Assistive module, <br> for deaf, blind, mentally challenged people.</p>
+        <button type="button" id="communicate" class="communicate_btn">Communicate</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="footertext">&copy; 2023 All Rights Reserved Comubridge.</p>
+  </footer>
+</body>
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- local resource -->
+
+<!-- js -->
+<script src="/assets/icons/font_awsome.js"></script>
+<script src="/js/profile.js"></script>
+<script src="/js/navbar.js"></script>
+
+</html>
