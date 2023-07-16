@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Search Engine use --->
+    <meta name="Comubridge" content="Team Comubridge" />
+    <meta name="description"
+        content="An easy to use and handy communication application for mute,deaf and blind people around world" />
+    <meta name="key words" content="communication,deaf,blind,mute,people,easy,handle,flexible,application,software" />
+
+    <meta name="google-site-verification" content="YKLJXdgbsyIvqhRuoHDyFMLeN-tjRe3W1rL5w13AULg" />
+
+    <!-- local resource -->
+
+    <!-- css -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Fav Icon-->
+    <link rel="icon" type="image/x-icon" href="/assets/images/temp_logo.png">
+    <title>Sign up | Comubridge</title>
+
+</head>
+
+<body>
+    <nav class="navbar">
+      <div class="logo"><img src="./assets/images/temp_logo.png" alt="Comubridge" class="logo"></div>
+    </nav>
+
+    <section id="singup_container">
+        <div class="container d-flex justify-content-center col-2 pb-5">
+            <div class="row">
+                <div class="col">
+                    <form class="mt-5">
+                        <h1 class="page_title">Welcome! <br> Let's get started by signing up today...</h1>
+                        <label class="errorMessageField"></label>
+                        <br>
+                        <input type="text" id="username" class="mt-2" placeholder="Please select a username">
+                        <div class="singup_details">
+                            <input type="text" id="name" placeholder="Enter your name">
+                            <input type="text" id="email" placeholder="example@gmail.com">
+                            <input type="number"maxlength="13" id="contact_no" placeholder="91XXXXXXXXXX">
+                            <input type="password" id="password" placeholder="Select a password">
+                            <input type="password" id="confirm_password" placeholder="Confirm your password">
+                            <button type="button" id="continue">Continue</button>
+                        </div>
+                        <a id="redirection_link" href="./login.html">Already have an account?</a>
+                        <div class="btn_wrapper">
+                            
+                            <br>
+                            <br>
+                            <button type="button" class="forward">Next<i class="fa-light fa-arrow-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+    </section>
+    <section id="otp_container" class="hide">
+        <div class="container d-flex justify-content-center col-3">
+            <div class="row">
+                <div class="col">
+                    <form class="mt-5">
+                        <p id="mainotptitle">Account verification <i class="fa-solid fa-lg fa-lock"></i></p>
+                        <h1>Enter verification code sent to your email</h1>
+                        <label class="errorMessageField" style="font-weight:bold;margin:auto;"></label>
+                        <div class="otp_details">
+                            <div class="opt_input mb-4 d-flex justify-content-center">
+                                <input class="otp_input" id="otp-first" type="number" min="0" max="9" step="1" aria-label="first digit" />
+                                <input class="otp_input" id="otp-second" type="number" min="0" max="9" step="1"
+                                    aria-label="second digit" />
+                                <input class="otp_input"id="otp-third" type="number" min="0" max="9" step="1" aria-label="third digit" />
+                                <input class="otp_input" id="otp-fourth" type="number" min="0" max="9" step="1"
+                                    aria-label="fourth digit" />
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" id="otp_timer" disabled>I haven't received a code(0:00)</button>
+                            </div>
+                            <button type="button" id="verifyotpbtn" class="mb-4 mt-5">Verify OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+ <!-- bootstrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+</script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+ <!-- js -->
+ <script src="assets/icons/font_awsome.js" defer="true"></script>
+ <script src="js/signup.js" defer="true"></script>
+
+ 
+ 
+</html>
